@@ -1,0 +1,11 @@
+{
+  "name": "floating-form-labels",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "1.0",
+    "grunt-contrib-uglify": "2"
+  },
+  "dependencies": {
+    "jquery": "3"
+  }
+}
