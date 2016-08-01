@@ -69,7 +69,7 @@
             this.label.removeClass(this.options.floatedClass);
         },
         destroy: function () {
-            this.input.off('focus.ffl, blur.ffl');
+            this.input.off('.ffl');
             this.label.removeClass(this.options.floatedClass);
 
             this.el.removeData(pluginName);

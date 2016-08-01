@@ -7,5 +7,22 @@
   },
   "dependencies": {
     "jquery": "3"
+  },
+  "description": "jQuery plugin that makes inline form labels usable again.",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "form",
+    "label",
+    "brad frost"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://Baedda@github.com/Baedda/floating-form-labels.git"
+  },
+  "author": "Christopher Canisius",
+  "contributors": "Christian Heinrich",
+  "bugs": {
+    "url": "https://github.com/Baedda/floating-form-labels/issues"
   }
 }
