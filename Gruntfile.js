@@ -3,6 +3,16 @@ module.exports = function config (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        eslint: {
+            options: {
+                configFile: '.eslintrc',
+            },
+            target: [
+                'Gruntfile.js',
+                'src/js/*.js',
+                'src/js/**/*.js'
+            ]
+        },
         uglify: {
             dist: {
                 files: {
@@ -12,8 +22,9 @@ module.exports = function config (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('default', ['dist']);
-    grunt.registerTask('dist', ['uglify:dist']);
+    grunt.registerTask('dist', ['eslint', 'uglify:dist']);
 };

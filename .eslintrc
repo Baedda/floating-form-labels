@@ -1,0 +1,6 @@
+{
+    "extends": "minds-base/legacy",
+    "globals": {
+        "define": true
+    }
+}

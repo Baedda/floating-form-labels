@@ -1,6 +1,4 @@
 (function (global, factory) {
-    'use strict';
-
     if (typeof define === 'function' && define.amd) {
         // AMD
         define(['jquery'], factory);
@@ -12,8 +10,6 @@
         factory(global.jQuery);
     }
 }(this, function ($) {
-    'use strict';
-
     var pluginName = 'FloatingFormLabels',
         defaults = {
             label: '.ffl-label',

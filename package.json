@@ -2,8 +2,11 @@
   "name": "floating-form-labels",
   "version": "0.0.1",
   "devDependencies": {
+    "eslint": "3",
+    "eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-preset-minds-base.git",
     "grunt": "1.0",
-    "grunt-contrib-uglify": "2"
+    "grunt-contrib-uglify": "2",
+    "grunt-eslint": "19"
   },
   "dependencies": {
     "jquery": "3"
@@ -16,7 +19,7 @@
     "label",
     "brad frost"
   ],
-  "license" : "MIT",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://Baedda@github.com/Baedda/floating-form-labels.git"
