@@ -16,6 +16,7 @@
     "label",
     "brad frost"
   ],
+  "license" : "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://Baedda@github.com/Baedda/floating-form-labels.git"
