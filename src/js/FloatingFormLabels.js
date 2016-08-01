@@ -10,14 +10,14 @@
         factory(global.jQuery);
     }
 }(this, function ($) {
-    var pluginName = 'FloatingFormLabels',
+    var pluginName = 'floatingFormLabels',
         defaults = {
             label: '.ffl-label',
             formElements: 'input, textarea',
             floatedClass: 'ffl-floated'
         };
 
-    function FloatingFormLabels (element, options) {
+    function floatingFormLabels (element, options) {
         this._name = pluginName;
         this.el = $(element);
         this.options = $.extend({}, defaults, options);
@@ -26,7 +26,7 @@
         this._init();
     }
 
-    FloatingFormLabels.prototype = {
+    floatingFormLabels.prototype = {
         _init: function () {
             var scope = this;
             this._toggleClass(this._isFloated());
@@ -78,7 +78,7 @@
 
         return this.each(function () {
             if (!$.data(this, pluginName)) {
-                $.data(this, pluginName, new FloatingFormLabels(this, options));
+                $.data(this, pluginName, new floatingFormLabels(this, options));
             } else if (typeof options === 'string') {
                 // call public methods with its own parameters
                 instance = $.data(this, pluginName);

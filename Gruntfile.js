@@ -16,7 +16,7 @@ module.exports = function config (grunt) {
         uglify: {
             dist: {
                 files: {
-                    'dist/js/FloatingFormLabels.min.js': 'src/js/FloatingFormLabels.js'
+                    'dist/js/floatingFormLabels.min.js': 'src/js/floatingFormLabels.js'
                 }
             }
         }
