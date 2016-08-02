@@ -1,0 +1,74 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.8.7
+3 info using node@v5.10.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/ch/projects/floating-form-labels',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/ch/.npm/floating-form-labels/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/ch/.npm correctMkdir not in flight; initializing
+10 info lifecycle floating-form-labels@0.0.1~prepublish: floating-form-labels@0.0.1
+11 silly lifecycle floating-form-labels@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/ch/.npm/floating-form-labels/0.0.1/package.tgz',
+12 verbose tar pack   '/home/ch/projects/floating-form-labels' ]
+13 verbose tarball /home/ch/.npm/floating-form-labels/0.0.1/package.tgz
+14 verbose folder /home/ch/projects/floating-form-labels
+15 verbose addLocalTarball adding from inside cache /home/ch/.npm/floating-form-labels/0.0.1/package.tgz
+16 verbose correctMkdir /home/ch/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd floating-form-labels@0.0.1
+18 verbose afterAdd /home/ch/.npm/floating-form-labels/0.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /home/ch/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/ch/.npm/floating-form-labels/0.0.1/package/package.json written
+21 silly publish { name: 'floating-form-labels',
+21 silly publish   version: '0.0.1',
+21 silly publish   devDependencies: { grunt: '1.0', 'grunt-contrib-uglify': '2' },
+21 silly publish   dependencies: { jquery: '3' },
+21 silly publish   readme: '# floating-form-labels\njQuery plugin that makes inline form labels usable again.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '0afb8768cc347e4cc8e3df3044440056802ef694',
+21 silly publish   description: 'jQuery plugin that makes inline form labels usable again.',
+21 silly publish   _id: 'floating-form-labels@0.0.1',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: '360ff9951bfff82961e3e468fe875d73f17c09d2',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name floating-form-labels
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'floating-form-labels',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'floating-form-labels',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/floating-form-labels
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/ch/.npm/floating-form-labels/0.0.1/package.tgz
+30 verbose stack Error: auth required for publishing
+30 verbose stack     at CachingRegistryClient.publish (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+30 verbose stack     at /usr/lib/node_modules/npm/lib/publish.js:137:14
+30 verbose stack     at mapToRegistry (/usr/lib/node_modules/npm/lib/utils/map-to-registry.js:62:3)
+30 verbose stack     at publish_ (/usr/lib/node_modules/npm/lib/publish.js:106:3)
+30 verbose stack     at Array.<anonymous> (/usr/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+30 verbose stack     at chain (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+30 verbose stack     at /usr/lib/node_modules/npm/lib/publish.js:72:5
+30 verbose stack     at RES (/usr/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+31 verbose cwd /home/ch/projects/floating-form-labels
+32 error Linux 3.13.0-91-generic
+33 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+34 error node v5.10.1
+35 error npm  v3.8.7
+36 error code ENEEDAUTH
+37 error need auth auth required for publishing
+38 error need auth You need to authorize this machine using `npm adduser`
+39 verbose exit [ 1, true ]

@@ -13,7 +13,7 @@
     var pluginName = 'floatingFormLabels',
         defaults = {
             label: '.ffl-label',
-            formElements: 'input, textarea',
+            formElements: 'input, textarea, select',
             floatedClass: 'ffl-floated'
         };
 
@@ -29,6 +29,7 @@
     floatingFormLabels.prototype = {
         _init: function () {
             var scope = this;
+
             this._toggleClass(this._isFloated());
 
             if (this._hasPlaceholder()) {
@@ -42,6 +43,9 @@
                 },
                 'blur.ffl': function () {
                     scope._toggleClass(scope._isFloated());
+                },
+                'change.ffl': function () {
+                    scope._toggleClass(true);
                 }
             });
         },
@@ -52,7 +56,7 @@
             return false;
         },
         _isFloated: function () {
-            if (this.input.val() === '') {
+            if (this.input.val() === '' || this.input.val() === null) {
                 return false;
             }
             return true;
