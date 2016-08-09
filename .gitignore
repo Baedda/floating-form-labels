@@ -3,5 +3,6 @@
 ._*
 .Spotlight-V100
 .Trashes
+.log
 Icon?
 /node_modules
