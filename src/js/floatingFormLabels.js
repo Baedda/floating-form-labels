@@ -17,7 +17,7 @@
             floatedClass: 'ffl-floated'
         };
 
-    function floatingFormLabels (element, options) {
+    function FloatingFormLabels (element, options) {
         this._name = pluginName;
         this.el = $(element);
         this.options = $.extend({}, defaults, options);
@@ -26,7 +26,7 @@
         this._init();
     }
 
-    floatingFormLabels.prototype = {
+    FloatingFormLabels.prototype = {
         _init: function () {
             var scope = this;
 
@@ -82,7 +82,7 @@
 
         return this.each(function () {
             if (!$.data(this, pluginName)) {
-                $.data(this, pluginName, new floatingFormLabels(this, options));
+                $.data(this, pluginName, new FloatingFormLabels(this, options));
             } else if (typeof options === 'string') {
                 // call public methods with its own parameters
                 instance = $.data(this, pluginName);
