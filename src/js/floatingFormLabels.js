@@ -13,7 +13,7 @@
     var pluginName = 'floatingFormLabels',
         defaults = {
             label: '.ffl-label',
-            formElements: 'input, textarea, select',
+            formElements: 'input, textarea',
             floatedClass: 'ffl-floated'
         };
 
