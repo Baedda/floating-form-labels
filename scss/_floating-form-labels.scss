@@ -1,0 +1,47 @@
+$ffl-selectors: (
+    wrapper: ".ffl-wrapper",
+    label: ".ffl-label",
+    floated: ".ffl-floated"
+) !default;
+
+$ffl-transition: (
+    'property': all,
+    'duration': 200ms,
+    'easing': ease
+) !default;
+
+@mixin floating-form-labels($position-top, $reserved-space) {
+    position: relative;
+    display: block;
+    padding: {
+        top: $reserved-space;
+    }
+
+    #{map-get($ffl-selectors, label)} {
+        transition: {
+            property: map-get($ffl-transition, 'property');
+            duration: map-get($ffl-transition, 'duration');
+            timing-function: map-get($ffl-transition, 'easing');
+            delay: 0s;
+        }
+        position: absolute;
+        white: {
+            space: nowrap;
+        }
+        max: {
+            width: 100%;
+        }
+        text: {
+            overflow: ellipsis;
+        }
+        overflow: hidden;
+        pointer: {
+            events: none;
+        }
+        top: $position-top;
+    }
+
+    #{map-get($ffl-selectors, floated)} {
+        top: 0;
+    }
+}
