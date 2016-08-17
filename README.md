@@ -71,7 +71,7 @@ As you can see there are two parameters our mixin expects. The first one (`$posi
 
 > Why didn't you choose a better way to center the label above the input?
 
-With a _normal_ CSS centering solution you could get in trouble when there will be added more markup to your wrapper container e.g. by a validation. Or in case of textareas you don't want to have a _true_ centering. This is why you have to move the labels down using a static parameter. The `$reserved-space` is necessary so the form dosn't jump when a label becomes floated. We didn't want to negativly position the labels because this could cause some trouble with foregoing form elements.
+With a _normal_ CSS centering solution you could get in trouble when there will be added more markup to your wrapper container e.g. by a validation. Or in case of textareas you don't want to have a _true_ centering. This is why you have to move the labels down using a static parameter. The `$reserved-space` is necessary so the form doesn't jump when a label becomes floated. We didn't want to negatively position the labels because this could cause some trouble with foregoing form elements.
 
 #### Settings
 | Setting | Value | Default | Desciption |
