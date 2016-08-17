@@ -1,13 +1,12 @@
 $ffl-selectors: (
-    wrapper: ".ffl-wrapper",
     label: ".ffl-label",
     floated: ".ffl-floated"
 ) !default;
 
 $ffl-transition: (
-    'property': all,
-    'duration': 200ms,
-    'easing': ease
+    property: all,
+    duration: 200ms,
+    easing: ease
 ) !default;
 
 @mixin floating-form-labels($position-top, $reserved-space) {
