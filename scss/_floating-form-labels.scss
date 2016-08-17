@@ -1,6 +1,6 @@
 $ffl-selectors: (
     label: ".ffl-label",
-    floated: ".ffl-floated"
+    floatedClass: ".ffl-floated"
 ) !default;
 
 $ffl-transition: (
@@ -40,7 +40,7 @@ $ffl-transition: (
         top: $position-top;
     }
 
-    #{map-get($ffl-selectors, floated)} {
+    #{map-get($ffl-selectors, floatedClass)} {
         top: 0;
     }
 }

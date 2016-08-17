@@ -1,7 +1,7 @@
 *Current state of development: Beta (not ready for production)*
 
 # Floating Form Labels
-Floating Form Labels takes [the concept from Matt D. Smit](https://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction) and wraps it into an easy to use jQuery plugin that is written by @jChris85 and me. Take a look to [the blog post from Brad Frost](http://bradfrost.com/blog/post/float-label-pattern/) to understand why this is essential when dealing with inline form labels.
+Floating Form Labels takes [the concept from Matt D. Smit](https://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction) and wraps it into an easy to use jQuery plugin that is written by [jChris85](https://github.com/jChris85) and me. Take a look to [the blog post from Brad Frost](http://bradfrost.com/blog/post/float-label-pattern/) to understand why this is essential when dealing with inline form labels.
 
 > But there are some other code snippets out there that do the same thing. Why do I need another one?
 
@@ -24,7 +24,7 @@ Alternatively, you can also download the plugin directly from GitHub, unzip the 
 ### HTML
 First you have to group your labels and inputs into container. These containers are the starting point for the JavaScript. We recommend to give them a unique class name. As default we are looking for a class named `ffl-wrapper` but you can change that if you want to.
 
-It's a good idea to add a unique class to your labels to avoid bugs if there will be added error labels by a validation or something like that. By default we are looking for a label named `ffl-label`.
+It's a good idea to add a unique class to your labels as well to avoid bugs if there will be added error labels by a validation or something like that. By default we are looking for a label named `ffl-label`.
 
 ```html
 <div class="ffl-wrapper">
@@ -49,7 +49,7 @@ $('.ffl-wrapper').floatingFormLabels();
 |---|---|---|---|
 | label | _String_ | '.ffl-label' | The selector string to find the label that will be floated inside your wrapping container. |
 | formElements | _String_ | 'input, textarea' | The form elements that Floating Form Labels will watch. |
-| floatedClass | _String_ | 'ffl-floated' | The class that is added to the DOM when a label gets floated. |
+| floatedClass | _String_ | 'ffl-floated' | The class that is added to the DOM when a label becomes floated. |
 
 #### Example
 If you don't have the control of your markup and want to add this plugin to some custom html.
@@ -71,20 +71,20 @@ As you can see there are two parameters our mixin expects. The first one (`$posi
 
 > Why didn't you choose a better way to center the label above the input?
 
-With a _normal_ CSS centering solution you could get in trouble when there will be added more markup to your wrapper container e.g. by a validation. Or in case of textareas you don't want to have a _true_ centering. This is why you have to move the labels down using a static parameter. The `$reserved-space` is necessary so the form dosn't jump when a label get floated. We didn't want to negativly position the labels because this could cause some trouble with foregoing form elements.
+With a _normal_ CSS centering solution you could get in trouble when there will be added more markup to your wrapper container e.g. by a validation. Or in case of textareas you don't want to have a _true_ centering. This is why you have to move the labels down using a static parameter. The `$reserved-space` is necessary so the form dosn't jump when a label becomes floated. We didn't want to negativly position the labels because this could cause some trouble with foregoing form elements.
 
 #### Settings
 | Setting | Value | Default | Desciption |
 |---|---|---|---|
-| $ffl-selectors | _Map_ | label: ".ffl-label",<br>floated: ".ffl-floated" | A Sass map containing the selector strings for the label and the class when the label gets floated. |
-| $ffl-transition | _Map_ | property: "all,<br>duration: 200ms,<br>easing: ease | A Sass map containing the configuration for the CSS transition. |
+| $ffl-selectors | _Map_ | label: ".ffl-label",<br>floatedClass: ".ffl-floated" | A Sass map containing the selector strings for the label and the class when the label becomes floated. |
+| $ffl-transition | _Map_ | property: all,<br>duration: 200ms,<br>easing: ease | A Sass map containing the configuration for the CSS transition. |
 
 #### Example
 You can change the markup to your own needs or fasten up the transition by just setting two variables.
 ```scss
 $ffl-selectors: (
     label: "label",
-    floated: ".postponedd"
+    floatedClass: ".postponed"
 );
 
 $ffl-transition: (
@@ -98,6 +98,6 @@ $ffl-transition: (
 ```
 
 ## FAQ
-> I've got some Ajax content in my form. Is there an update method to init the plugin to this new fields?
+> I've got some ajax content in my form. Is there an update method to init the plugin for this new fields?
 
 You can simply recall the plugin after the ajax is done. The plugin won't get double initialized on the fields that are already present.
