@@ -1,6 +1,6 @@
 {
   "name": "floating-form-labels",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "devDependencies": {
     "eslint": "3",
     "eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-config-minds-base.git",
