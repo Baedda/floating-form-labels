@@ -1,5 +1,3 @@
-*Current state of development: Beta (not ready for production)*
-
 # Floating Form Labels
 Floating Form Labels takes [the concept from Matt D. Smit](https://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction) and wraps it into an easy to use jQuery plugin that is written by [jChris85](https://github.com/jChris85) and me. Take a look to [the blog post from Brad Frost](http://bradfrost.com/blog/post/float-label-pattern/) to understand why this is essential when dealing with inline form labels.
 
@@ -61,7 +59,7 @@ $('.your-custom-wrapper').floatingFormLabels({
 ```
 
 ### Sass
-By default Floating Form Labels just triggers some classes in the DOM. To see the desired effect you have to insert some CSS. You can write that for yourself or you can include our handy [Sass](http://sass-lang.com/) mixin that will do most of the job for you. Import the file `floating-form-labels/scss/floating-form-labels` into your project and then include our mixin inside the selector of the wrapping container.
+By default Floating Form Labels just triggers some classes in the DOM. To see the desired effect you have to insert some CSS. You can write that for yourself or you can include our handy [Sass](http://sass-lang.com/) mixin that will do most of the job for you. Import the file `floating-form-labels/scss/floating-form-labels.scss` into your project and then include our mixin inside the selector of the wrapping container.
 ```scss
 .ffl-wrapper {
     @include floating-form-labels($position-top, $reserved-space);
@@ -101,3 +99,14 @@ $ffl-transition: (
 > I've got some ajax content in my form. Is there an update method to init the plugin for this new fields?
 
 You can simply recall the plugin after the ajax is done. The plugin won't get double initialized on the fields that are already present.
+
+> I have nested my input element inside the label to save the for attribute. Is this DOM structure also supported or has the input and the label to be on the same level?
+
+Yes this structure is also supported because Floating Form Label is markup agnostic. You only have to wrap the text of the label inside an element (e.g. a `<span>`) that can be positioned above the input. For example your markup could look like this:
+
+```html
+<label class="ffl-wrapper">
+    <span class="ffl-label">Label</span>
+    <input type="text">
+</label>
+```
