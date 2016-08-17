@@ -1,6 +1,6 @@
 {
   "name": "floating-form-labels",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "devDependencies": {
     "eslint": "3",
     "eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-config-minds-base.git",
@@ -17,7 +17,10 @@
     "plugin",
     "form",
     "label",
-    "brad frost"
+    "inline",
+    "floating",
+    "brad frost",
+    "matt d. smit"
   ],
   "license": "MIT",
   "repository": {

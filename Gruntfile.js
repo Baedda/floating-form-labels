@@ -1,8 +1,16 @@
 module.exports = function config (grunt) {
     'use strict';
 
+    var pkg = grunt.file.readJSON('package.json'),
+        banner = '/*!**************************************************************\n' +
+            ' * Package: <%= pkg.name %>\n' +
+            ' * Version: v<%= pkg.version %>\n' +
+            ' * Built  : <%= Date() %>\n' +
+            ' * URL  : https://github.com/Baedda/floating-form-labels\n' +
+            ' ***************************************************************/\n';
+
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: pkg,
         eslint: {
             options: {
                 configFile: '.eslintrc',
@@ -14,12 +22,15 @@ module.exports = function config (grunt) {
             ]
         },
         uglify: {
+            options: {
+                banner: banner
+            },
             dist: {
                 files: {
                     'dist/floatingFormLabels.min.js': 'js/floatingFormLabels.js'
                 }
             }
-        }
+        },
     });
 
     grunt.loadNpmTasks('grunt-eslint');

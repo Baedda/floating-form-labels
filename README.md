@@ -38,7 +38,7 @@ It's a good idea to add a unique class to your labels as well to avoid bugs if t
 ```
 
 ### JavaScript
-Next you have to load the file `floating-form-labels/dist/floatingFormLabels.min.js` into your project and make sure that [jQuery](http://jquery.com/) is ready to use. You can do this by adding another script tag to your DOM or use a module loader for that. Then you have to call the plugin on a selector that matches your wrapping containers.
+Next you have to load the file `floating-form-labels/dist/floatingFormLabels.min.js` into your project and make sure that [jQuery](http://jquery.com/) is ready to use. You can do this by adding another script tag to your DOM or use a module loader for that. Then you have to call the plugin with a selector that matches your wrapping containers.
 
 ```javascript
 $('.ffl-wrapper').floatingFormLabels();
