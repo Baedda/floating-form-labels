@@ -1,13 +1,8 @@
-$ffl-selectors: (
-    label: ".ffl-label",
-    floatedClass: ".ffl-floated"
-) !default;
+$ffl-label: ".ffl-label" !default;
+$ffl-floatedClass: ".ffl-floated" !default;
 
-$ffl-transition: (
-    property: all,
-    duration: 200ms,
-    easing: ease
-) !default;
+$ffl-transition-duration: 200ms !default;
+$ffl-transition-easing: ease !default;
 
 @mixin floating-form-labels($position-top, $reserved-space) {
     position: relative;
@@ -16,11 +11,11 @@ $ffl-transition: (
         top: $reserved-space;
     }
 
-    #{map-get($ffl-selectors, label)} {
+    #{$ffl-label} {
         transition: {
-            property: map-get($ffl-transition, 'property');
-            duration: map-get($ffl-transition, 'duration');
-            timing-function: map-get($ffl-transition, 'easing');
+            property: all;
+            duration: $ffl-transition-duration;
+            timing-function: $ffl-transition-easing;
             delay: 0s;
         }
         position: absolute;
@@ -38,9 +33,9 @@ $ffl-transition: (
             events: none;
         }
         top: $position-top;
-    }
 
-    #{map-get($ffl-selectors, floatedClass)} {
-        top: 0;
+        &#{$ffl-floatedClass} {
+            top: 0;
+        }
     }
 }

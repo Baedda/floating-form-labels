@@ -11,7 +11,7 @@ Floating Form Labels ...
 
 ## Installation
 We recommend using a package manager to install Floating Form Labels as a dependency of your project. Please read the docs of the respective package manager if you don't know how to use it.
-* npm: `npm install floating-form-labels`
+* [npm](https://www.npmjs.com/package/floating-form-labels): `npm install floating-form-labels`
 * Bower: `bower install floating-form-labels`
 
 You can add `--save` as parameter if you want to add the plugin into your `package.json` or `bower.json`.
@@ -65,30 +65,25 @@ By default Floating Form Labels just triggers some classes in the DOM. To see th
     @include floating-form-labels($position-top, $reserved-space);
 }
 ```
-As you can see there are two parameters our mixin expects. The first one (`$position-top`) is used to move the label from its regular position above the input element. The second one (`$reserved-space`) is used to create a padding-top inside the wrapper to reserve the space for the label to get floated.
+As you can see there are **two parameters our mixin expects**. The first one (`$position-top`) is used to move the label from its regular position above the input element. The second one (`$reserved-space`) is used to create a padding-top inside the wrapper to reserve the space for the label to get floated.
 
 > Why didn't you choose a better way to center the label above the input?
 
 With a _normal_ CSS centering solution you could get in trouble when there will be added more markup to your wrapper container e.g. by a validation. Or in case of textareas you don't want to have a _true_ centering. This is why you have to move the labels down using a static parameter. The `$reserved-space` is necessary so the form doesn't jump when a label becomes floated. We didn't want to negatively position the labels because this could cause some trouble with foregoing form elements.
 
 #### Settings
-| Setting | Value | Default | Desciption |
-|---|---|---|---|
-| $ffl-selectors | _Map_ | label: ".ffl-label",<br>floatedClass: ".ffl-floated" | A Sass map containing the selector strings for the label and the class when the label becomes floated. |
-| $ffl-transition | _Map_ | property: all,<br>duration: 200ms,<br>easing: ease | A Sass map containing the configuration for the CSS transition. |
+| Setting | Default | Desciption |
+|---|---|---|
+| $ffl-label | ".ffl-label" | The selector string to find the label that will be floated inside your wrapping container. |
+| $ffl-floatedClass | ".ffl-floated | The class that is added by the JavaScript. |
+| $ffl-transition-duration | 200ms |  |
+| $ffl-transition-easing | ease |  |
 
 #### Example
 You can change the markup to your own needs or fasten up the transition by just setting two variables.
 ```scss
-$ffl-selectors: (
-    label: "label",
-    floatedClass: ".postponed"
-);
-
-$ffl-transition: (
-    duration: 100ms,
-    easing: linear
-);
+$ffl-label: ".my-own-label-class";
+$ffl-transition-duration: 100ms;
 
 .your-custom-wrapper {
     @include floating-form-labels(0.7rem, 0.5rem);
