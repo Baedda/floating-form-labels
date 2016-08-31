@@ -23,6 +23,7 @@
         this.options = $.extend({}, defaults, options);
         this.label = this.el.find(this.options.label);
         this.input = this.el.find(this.options.formElements);
+        this.floated = false;
         this._init();
     }
 
@@ -49,7 +50,7 @@
                 }
             });
 
-            this.el.trigger('init.ffl');
+            this.el.trigger('init.ffl', this);
         },
         _hasPlaceholder: function () {
             if (typeof this.input.attr('placeholder') !== 'undefined') {
@@ -59,17 +60,20 @@
         },
         _isFloated: function () {
             if (this.input.val() === '' || this.input.val() === null) {
+                this.floated = false;
                 return false;
             }
+
+            this.floated = true;
             return true;
         },
         _toggleClass: function (floated) {
-            this.label.trigger('toggle.ffl');
             if (floated) {
                 this.el.addClass(this.options.floatedClass);
-                return;
+            } else {
+                this.el.removeClass(this.options.floatedClass);
             }
-            this.el.removeClass(this.options.floatedClass);
+            this.label.trigger('toggle.ffl', this);
         },
         destroy: function () {
             this.input.off('.ffl');
