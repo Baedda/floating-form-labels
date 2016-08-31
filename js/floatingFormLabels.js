@@ -60,18 +60,18 @@
         },
         _isFloated: function () {
             if (this.input.val() === '' || this.input.val() === null) {
-                this.floated = false;
                 return false;
             }
 
-            this.floated = true;
             return true;
         },
         _toggleClass: function (floated) {
             if (floated) {
                 this.el.addClass(this.options.floatedClass);
+                this.floated = true;
             } else {
                 this.el.removeClass(this.options.floatedClass);
+                this.floated = false;
             }
             this.label.trigger('toggle.ffl', this);
         },

@@ -49,12 +49,27 @@ $('.ffl-wrapper').floatingFormLabels();
 | formElements | _String_ | 'input, textarea' | The form elements that Floating Form Labels will watch. |
 | floatedClass | _String_ | 'ffl-floated' | The class that is added to the DOM when a label becomes floated. |
 
-#### Example
+#### Events
+The following events are fired on your wrapping container:
+| Event | Returns | Desciption |
+|---|---|---|
+| init.ffl | Instance of plugin | Fires when Floating Form Labels is ready. |
+| toggle.ffl | Instance of plugin | Fires on every interaction with the input. |
+
+#### Examples
 If you don't have the control of your markup and want to add this plugin to some custom html.
 ```javascript
 $('.your-custom-wrapper').floatingFormLabels({
     label: 'label',
     floatedClass: 'postponed'
+});
+```
+
+If you want to check if a label is floated programmatically you use can use events for this.
+```javascript
+$('#label-for-input-1').on('toggle.ffl', function (event, ffl) {
+    // log out the current state of the label
+    console.log(ffl.floated);
 });
 ```
 
