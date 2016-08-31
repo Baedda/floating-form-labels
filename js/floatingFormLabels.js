@@ -12,7 +12,6 @@
 }(this, function ($) {
     var pluginName = 'floatingFormLabels',
         defaults = {
-            label: '.ffl-label',
             formElements: 'input, textarea',
             floatedClass: 'ffl-floated'
         };
@@ -21,7 +20,6 @@
         this._name = pluginName;
         this.el = $(element);
         this.options = $.extend({}, defaults, options);
-        this.label = this.el.find(this.options.label);
         this.input = this.el.find(this.options.formElements);
         this._init();
     }
@@ -63,16 +61,14 @@
         },
         _toggleClass: function (floated) {
             if (floated) {
-                this.label.addClass(this.options.floatedClass);
+                this.el.addClass(this.options.floatedClass);
                 return;
             }
-            this.label.removeClass(this.options.floatedClass);
+            this.el.removeClass(this.options.floatedClass);
         },
         destroy: function () {
             this.input.off('.ffl');
-            this.label.removeClass(this.options.floatedClass);
-
-            this.el.removeData(pluginName);
+            this.el.removeClass(this.options.floatedClass).removeData(pluginName);
         }
     };
 

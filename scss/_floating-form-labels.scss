@@ -34,7 +34,11 @@ $ffl-transition-easing: ease !default;
         }
         top: $position-top;
 
-        &#{$ffl-floatedClass} {
+
+    }
+
+    &#{$ffl-floatedClass} {
+        #{$ffl-label} {
             top: 0;
         }
     }
