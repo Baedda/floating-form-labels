@@ -51,6 +51,7 @@ $('.ffl-wrapper').floatingFormLabels();
 
 #### Events
 The following events are fired on your wrapping container:
+
 | Event | Returns | Description |
 |---|---|---|
 | init.ffl | _Instance of plugin_ | Fires when Floating Form Labels is ready. |
