@@ -12,6 +12,7 @@
 }(this, function ($) {
     var pluginName = 'floatingFormLabels',
         defaults = {
+            label: '.ffl-label',
             formElements: 'input, textarea',
             floatedClass: 'ffl-floated'
         };
@@ -20,6 +21,7 @@
         this._name = pluginName;
         this.el = $(element);
         this.options = $.extend({}, defaults, options);
+        this.label = this.el.find(this.options.label);
         this.input = this.el.find(this.options.formElements);
         this._init();
     }
@@ -46,6 +48,8 @@
                     scope._toggleClass(true);
                 }
             });
+
+            this.el.trigger('init.ffl');
         },
         _hasPlaceholder: function () {
             if (typeof this.input.attr('placeholder') !== 'undefined') {
@@ -60,6 +64,7 @@
             return true;
         },
         _toggleClass: function (floated) {
+            this.label.trigger('toggle.ffl');
             if (floated) {
                 this.el.addClass(this.options.floatedClass);
                 return;
