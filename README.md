@@ -66,7 +66,7 @@ $('.your-custom-wrapper').floatingFormLabels({
 });
 ```
 
-If you want to check if a label is floated programmatically you use can use events for this.
+If you want to check if a label is floated programmatically you can use events for this.
 ```javascript
 $('label#label-for-input-1').on('toggle.ffl', function (event, ffl) {
     // log out the current state of the label
