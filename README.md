@@ -1,4 +1,4 @@
-# Floating Form Labels
+# Floating Form Labels ([Demo](http://codepen.io/jChris85/pen/jrZypv))
 Floating Form Labels takes [the concept from Matt D. Smit](https://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction) and wraps it into an easy to use jQuery plugin that is written by [jChris85](https://github.com/jChris85) and me. Take a look to [the blog post from Brad Frost](http://bradfrost.com/blog/post/float-label-pattern/) to understand why this is essential when dealing with inline form labels.
 
 > But there are some other code snippets out there that do the same thing. Why do I need another one?
@@ -43,7 +43,7 @@ $('.ffl-wrapper').floatingFormLabels();
 ```
 
 #### Options
-| Option | Value | Default | Desciption |
+| Option | Value | Default | Description |
 |---|---|---|---|
 | label | _String_ | '.ffl-label' | The selector string to find the label that will be floated inside your wrapping container. |
 | formElements | _String_ | 'input, textarea' | The form elements that Floating Form Labels will watch. |
@@ -88,7 +88,7 @@ As you can see there are **two parameters our mixin expects**. The first one (`$
 With a _normal_ CSS centering solution you could get in trouble when there will be added more markup to your wrapper container e.g. by a validation. Or in case of textareas you don't want to have a _true_ centering. This is why you have to move the labels down using a static parameter. The `$reserved-space` is necessary so the form doesn't jump when a label becomes floated. We didn't want to negatively position the labels because this could cause some trouble with foregoing form elements.
 
 #### Settings
-| Setting | Default | Desciption |
+| Setting | Default | Description |
 |---|---|---|
 | $ffl-label | ".ffl-label" | The selector string to find the label that will be floated inside your wrapping container. |
 | $ffl-floatedClass | ".ffl-floated | The class that is added by the JavaScript. |
