@@ -1,3 +1,5 @@
+![Floating Form Labels Demo](https://cloud.githubusercontent.com/assets/412895/19562456/97680886-9706-11e6-8cd1-db01a113b51b.gif)
+
 # Floating Form Labels ([Demo](http://codepen.io/jChris85/pen/jrZypv))
 Floating Form Labels takes [the concept from Matt D. Smit](https://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction) and wraps it into an easy to use jQuery plugin that is written by [jChris85](https://github.com/jChris85) and me. Take a look to [the blog post from Brad Frost](http://bradfrost.com/blog/post/float-label-pattern/) to understand why this is essential when dealing with inline form labels.
 
