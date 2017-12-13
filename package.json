@@ -9,7 +9,7 @@
     "grunt-eslint": "^20.1.0"
   },
   "dependencies": {
-    "jquery": "3"
+    "jquery": ">=2.x <=3.x"
   },
   "description": "jQuery plugin that makes inline form labels usable again.",
   "keywords": [
