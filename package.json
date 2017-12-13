@@ -35,5 +35,8 @@
   },
   "scripts": {
     "dist": "grunt dist"
+  },
+  "publishConfig":{
+    "registry": "https://registry.npmjs.org/"
   }
 }
