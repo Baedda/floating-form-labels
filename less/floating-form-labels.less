@@ -1,0 +1,30 @@
+@ffl-label: ~'ffl-label';
+@ffl-floatedClass: ~'ffl-floated';
+
+@ffl-transition-duration: 200ms;
+@ffl-transition-easing: ease;
+
+.floating-form-labels(@position-top, @reserved-space) {
+    position: relative;
+    display: block;
+    padding-top: @reserved-space;
+    .@{ffl-label} {
+        transition-property: all;
+        transition-duration: @ffl-transition-duration;
+        transition-timing-function: @ffl-transition-easing;
+        transition-delay: 0s;
+        position: absolute;
+        white-space: nowrap;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        pointer-events: none;
+        top: @position-top;
+    }
+
+    &.@{ffl-floatedClass} {
+        .@{ffl-label} {
+            top: 0;
+        }
+    }
+}
