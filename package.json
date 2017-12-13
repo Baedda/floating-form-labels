@@ -2,11 +2,11 @@
   "name": "floating-form-labels",
   "version": "1.2.0",
   "devDependencies": {
-    "eslint": "3",
+    "eslint": "^4.8.0",
     "eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-config-minds-base.git",
     "grunt": "1.0",
-    "grunt-contrib-uglify": "2",
-    "grunt-eslint": "19"
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-eslint": "^20.1.0"
   },
   "dependencies": {
     "jquery": "3"
@@ -31,5 +31,8 @@
   "contributors": "Christian Heinrich",
   "bugs": {
     "url": "https://github.com/Baedda/floating-form-labels/issues"
+  },
+  "scripts": {
+    "dist": "grunt dist"
   }
 }
