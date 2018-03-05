@@ -1,13 +1,14 @@
 $ffl-label: ".ffl-label" !default;
 $ffl-floatedClass: ".ffl-floated" !default;
+$ffl-reserved-spacing-method: "padding" !default;
 
 $ffl-transition-duration: 200ms !default;
 $ffl-transition-easing: ease !default;
 
-@mixin floating-form-labels($position-top, $reserved-space) {
+@mixin floating-form-labels($position-top, $reserved-space, $spacing-method: $ffl-reserved-spacing-method) {
     position: relative;
     display: block;
-    padding: {
+    #{$spacing-method}: {
         top: $reserved-space;
     }
 
