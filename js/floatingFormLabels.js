@@ -59,7 +59,7 @@
             return false;
         },
         _isFloated: function () {
-            if (this.input.val() === '' || this.input.val() === null) {
+            if (this.input.val() === '' || this.input.val() === null || this.input.val().length === 0) {
                 return false;
             }
 
