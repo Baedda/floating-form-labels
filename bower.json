@@ -1,0 +1,24 @@
+{
+  "name": "floating-form-labels",
+  "description": "jQuery plugin that makes inline form labels usable again.",
+  "main": "dist/floatingFormLabels.min.js",
+  "authors": [
+    "Christian Heinrich",
+    "Christopher Canisius"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "form",
+    "label",
+    "inline",
+    "floating",
+    "brad",
+    "frost",
+    "matt",
+    "d.",
+    "smit"
+  ],
+  "homepage": "https://github.com/Baedda/floating-form-labels"
+}
