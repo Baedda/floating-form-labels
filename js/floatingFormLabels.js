@@ -32,6 +32,7 @@
             var scope = this;
 
             this._toggleClass(this._isFloated());
+            this._toggleClass(this._isWebkitAutofilled());
 
             if (this._hasPlaceholder()) {
                 this._toggleClass(true);
@@ -49,7 +50,6 @@
                     scope._toggleClass(true);
                 }
             });
-
             this.el.trigger('init.ffl', this);
         },
         _hasPlaceholder: function () {
@@ -64,6 +64,14 @@
             }
 
             return true;
+        },
+        _isWebkitAutofilled: function () {
+            try {
+                if (this.el.find(':-webkit-autofill').length > 0) {
+                    return true;
+                }
+            } catch (e) {}
+            return false;
         },
         _toggleClass: function (floated) {
             if (floated) {
