@@ -1,13 +1,13 @@
 {
   "name": "floating-form-labels",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "dist/floatingFormLabels.min.js",
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-config-minds-base.git",
-    "grunt": "1.0",
-    "grunt-contrib-uglify": "^3.1.0",
-    "grunt-eslint": "^20.1.0"
+    "eslint": "*",
+    "@minds/eslint-config-minds-base": "*",
+    "grunt": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-eslint": "*"
   },
   "dependencies": {
     "jquery": ">=2.x <=3.x"
@@ -36,7 +36,7 @@
   "scripts": {
     "dist": "grunt dist"
   },
-  "publishConfig":{
+  "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }
 }

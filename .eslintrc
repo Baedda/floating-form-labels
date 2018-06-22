@@ -1,5 +1,5 @@
 {
-    "extends": "minds-base/legacy",
+    "extends": "@minds/eslint-config-minds-base/legacy",
     "globals": {
         "define": true
     }
