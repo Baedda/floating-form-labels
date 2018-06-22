@@ -2,11 +2,21 @@
   "name": "floating-form-labels",
   "description": "jQuery plugin that makes inline form labels usable again.",
   "main": "dist/floatingFormLabels.min.js",
-  "authors": [
-    "Christian Heinrich",
-    "Christopher Canisius"
+  "dependencies": {
+    "jquery": ">=2.x <=3.x"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-config-minds-base.git",
+    "grunt": "1.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-eslint": "^20.1.0"
+  },
+  "moduleType": [
+    "globals",
+    "amd",
+    "node"
   ],
-  "license": "MIT",
   "keywords": [
     "jquery",
     "plugin",
@@ -20,5 +30,10 @@
     "d.",
     "smit"
   ],
+  "authors": [
+    "Christian Heinrich",
+    "Christopher Canisius"
+  ],
+  "license": "MIT",
   "homepage": "https://github.com/Baedda/floating-form-labels"
 }
