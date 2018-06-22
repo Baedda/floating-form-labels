@@ -4,7 +4,7 @@
   "main": "dist/floatingFormLabels.min.js",
   "devDependencies": {
     "eslint": "*",
-    "@minds/eslint-config-minds-base": "*",
+    "@minds/eslint-config-minds-base": "git+https://github.com/Electronic-Minds/minds.eslint-config-minds-base.git",
     "grunt": "*",
     "grunt-contrib-uglify": "*",
     "grunt-eslint": "*"
