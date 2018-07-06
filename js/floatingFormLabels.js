@@ -53,7 +53,7 @@
             this.el.trigger('init.ffl', this);
         },
         _hasPlaceholder: function () {
-            if (typeof this.input.attr('placeholder') !== 'undefined') {
+            if ($.trim(this.input.attr('placeholder')) !== '') {
                 return true;
             }
             return false;
